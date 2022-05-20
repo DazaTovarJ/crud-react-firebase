@@ -1,5 +1,12 @@
 import React, {useState, useEffect} from "react";
-import {addDoc, collection, deleteDoc, doc, getDocs} from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  deleteDoc,
+  doc,
+  getDocs,
+  updateDoc,
+} from "firebase/firestore";
 import {db} from "./firebase";
 
 const defaultForm = {
@@ -40,9 +47,19 @@ function App() {
     }
   };
 
-  const updateData = (user) => {
-    // let updatedList = list.map((data) => (data.id === user.id ? user : data));
-    // setList(updatedList);
+  const updateData = async (user) => {
+    try {
+      const userRef = doc(db, "users", user.id);
+
+      await updateDoc(userRef, {
+        given_name: user.given_name,
+        family_name: user.family_name,
+      });
+      let updatedList = list.map((data) => (data.id === user.id ? user : data));
+      setList(updatedList);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const deleteData = async (id) => {
