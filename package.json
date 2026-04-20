@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://dazatovarj.github.io/crud-react-firebase",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
@@ -35,8 +36,11 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.1",
     "eslint": "^10.2.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-react-hooks": "^7.1.1",
     "gh-pages": "^5.0.0",
+    "prettier": "3.8.3",
     "vite": "^8.0.9",
     "vite-plugin-eslint2": "^5.1.0"
   }
