@@ -1709,7 +1709,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^7.1.1"
     firebase: "npm:^11.10.0"
     gh-pages: "npm:^6.3.0"
-    jsdom: "npm:^29.0.2"
+    jsdom: "npm:^29.1.1"
     prettier: "npm:3.9.10"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
@@ -2483,7 +2483,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsdom@npm:^29.0.2":
+"jsdom@npm:^29.1.1":
   version: 29.1.1
   resolution: "jsdom@npm:29.1.1"
   dependencies:
